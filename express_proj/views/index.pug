@@ -1,10 +1,11 @@
-extends layout
-
-<!--template engine은 동적 파일과 정적 파일의 장단점을 결합한 형태-->
-<!--pug(= jade)는 들여쓰기를 통해 계층 구조 표현-->
+html
   head
     title= title
   body
-    div#solElement1 
-      |~Welcome~
-      |#{title} Page
+    h1 Hello #{title}
+    ul
+      -for(var i = 0; i < 5; i++)
+        li unordered list #{i + 1}
+    ol
+      -for(var i = 0; i < 5; i++)
+        li ordered list #{i + 1}
